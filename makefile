@@ -13,7 +13,7 @@ $(BUILD)/kernel/%.o:$(SRC)/kernel/%.s
 	riscv64-unknown-elf-gcc -c $^ -o $@
 $(BUILD)/kernel/%.o:$(SRC)/kernel/%.c
 	-$(shell mkdir -p $(BUILD)/kernel)
-	riscv64-unknown-elf-gcc -c $^ -o $@
+	riscv64-unknown-elf-gcc -c $^ -o $@ 
 clean:
 	-rm -rf $(BUILD)
 	@echo clean success
